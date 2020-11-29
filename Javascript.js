@@ -34,7 +34,14 @@
 */
 
 // build the nav
+function openNav() {
+  document.getElementsByClass("navbar__menu").style.width = "250px";
+}
 
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementsByClass("navbar__menu").style.width = "0";
+}
 
 // Add class 'active' to section when near top of viewport
 
