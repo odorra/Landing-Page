@@ -1,46 +1,70 @@
-let sections = document.querySelectorAll('.section');
-function dataNav() {
-  var x = document.getElementByTagName("H1")[0].getattribute("data-nav");
-  document.getElementByID("").innerHTML = x;
-}
-function scroll() {
-  sections.ForEach ( (section) => {
-    let text = section.getAttribute("data-nav");
-    let newli = document.createElement('li');
-    let newlink = document.createElement('a');
-    element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-    let textNode = document.createTextNode(text);
-    appendChild(fragment); } );
-  ul.appendChild(fragment);}
+document.addEventListener('DOMContentLoaded', (event) => {
+    myapp.run();
+    //alert("Started");
+});
 
-function boundary() {
-  var div = document.getElementById("myDiv");
-  var rect = div.getBoundingClientRect();
-  x = rect.left;
-  y = rect.top;
-  b = rect.bottom;
-  w = rect.width;
-  h = rect.height;
-  alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + b);}
-let links = document.querySelectorAll('a');
-function active_link(active_section) {
-  let section_nav = active_section.getAttribute('data-nav');}
-  links.forEach ( (links) => {
-    if (links.textcontent == section_nav){
-      querySelectorAll('link');
-      links.classList.add('activeclass');
-      active_link(link); } 
+
+const myapp = {run: () => {return myFunction();}};
+
+function myFunction() {
+	
+  
+let sections = document.querySelectorAll('.section');
+
+let mylinks = document.querySelectorAll('.navlink');
+
+
+//function remove active class
+function deactivesec() {
+  sections.forEach((elm) => {
+      elm.classList.remove('your-active-class'); 
   });
-function boundary2() {
-  sections.ForEach ( (section) => {
-    let rect = section.getBoundingClientRect();
-    if (rect.top >=0 && rect.bottom < window.innerHeight) {
-      querySelectorAll('section');
-      section.classList.add('your-active-class');}
-      active_link(section);
-    }
-  );
 }
+
+function deactivelink() {
+   let mylinks = document.querySelectorAll(".navlink");
+  mylinks.forEach((elm) => {
+      elm.classList.remove('active-nav'); 
+  });
+}
+
+function setactivelink(cureent_section) {
+
+
+   let mylinks = document.querySelectorAll(".navlink");
+   
+    
+	
+	
+	
+    mylinks.forEach((element)=> {
+		let link_href = element.getAttribute('href');
+		if (link_href == "#" + cureent_section) {
+			
+			element.classList.add("active-nav");
+		}
+		
+		
+	});
+
+	
+}
+
+//Function to check if an element is in viewport or not
+var isInViewport = function (elem) {
+	var distance = elem.getBoundingClientRect();
+
+	return (
+	    // if the section bigger than the viewport this will return flase we can check only if top in view port or add varince
+		distance.top >= 0 &&
+		distance.left >= 0 &&
+		distance.bottom <= (window.innerHeight + 220 || document.documentElement.clientHeight) &&
+		distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+};
+
+
+
 window.addEventListener('scroll', function (event) {
     sections.forEach((element)=>{
         //console.log(element);
