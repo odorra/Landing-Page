@@ -30,9 +30,9 @@ function boundary() {
   w = rect.width;
   h = rect.height;
   alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + b);}
-
+let links = document.querySelectorAll('a');
 function active_link(active_section) {
-  let links = document.querySelectorAll('a');
+ 
   let section_nav = active_section.getAttribute('data-nav');}
   links.forEach ( (links) => {
     if (links.textcontent == section_nav){
