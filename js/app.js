@@ -6,7 +6,7 @@ function openNav() {
 function closeNav() {
   document.getElementsByClass("navbar__menu").style.width = "0";
 }
-
+let sections = document.querySelectorAll('.section');
 function dataNav() {
   var x = document.getElementByTagName("H1")[0].getattribute("data-nav");
   document.getElementByID("").innerHTML = x;
