@@ -34,10 +34,10 @@ function boundary() {
 function active_link(active_section) {
   let links = document.querySelectorAll('a');
   let section_nav = active_section.getAttribute('data-nav');}
-  link.forEach ( (links) => {
-    if (link.textcontent == section_nav){
+  links.forEach ( (links) => {
+    if (links.textcontent == section_nav){
       querySelectorAll('link');
-      link.classList.add('activeclass');
+      links.classList.add('activeclass');
       active_link(link); } 
   });
 function boundary2() {
