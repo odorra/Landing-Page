@@ -9,7 +9,7 @@ const myapp = {run: () => {return myFunction();}};
 function myFunction() {
 	
   
-let sections = document.querySelectorAll('.section');
+let sections = document.querySelectorAll('section');
 
 let mylinks = document.querySelectorAll('.navlink');
 
@@ -28,7 +28,7 @@ function deactivelink() {
   });
 }
 
-function setactivelink(cureent_section) {
+function setactivelink(current_section) {
 
 
    let mylinks = document.querySelectorAll(".navlink");
@@ -39,7 +39,7 @@ function setactivelink(cureent_section) {
 	
     mylinks.forEach((element)=> {
 		let link_href = element.getAttribute('href');
-		if (link_href == "#" + cureent_section) {
+		if (link_href == "#" + current_section) {
 			
 			element.classList.add("active-nav");
 		}
@@ -118,7 +118,8 @@ window.addEventListener('scroll', function (event) {
        }
        x = 0;
        myul.appendChild(fragment);
-       
+       var active = document.getElementById("section");
+       active.scrollIntoView();
     }
     
   
