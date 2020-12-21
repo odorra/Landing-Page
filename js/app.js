@@ -1,11 +1,3 @@
-function openNav() {
-  document.getElementsByClass("navbar__menu").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementsByClass("navbar__menu").style.width = "0";
-}
 let sections = document.querySelectorAll('.section');
 function dataNav() {
   var x = document.getElementByTagName("H1")[0].getattribute("data-nav");
@@ -76,4 +68,3 @@ function boundary2() {
   
   
   projectData.create_nav();
-  }
