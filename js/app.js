@@ -42,29 +42,36 @@ function boundary2() {
   );
 }
  // get the ul element using HTML DOM
-  const myul = document.getElementById("navbar__list");
+const myul = document.getElementById("navbar__list");
   
   // get the ul element
-  projectData['ul'] = myul;
+projectData['ul'] = myul;
   
   
   // get the ul id
-  projectData['ulid'] = projectData.ul.id;
-  //alert(projectData.ulid);
+projectData['ulid'] = projectData.ul.id;
+alert(projectData.ulid);
   
   
   // feature li 
-  let allli = document.querySelectorAll(".section");
-  //alert(allli);
+let allli = document.querySelectorAll(".section");
+alert(allli);
   
   
   // get the nav container
-  let mynav = myul.parentElement;
+let mynav = myul.parentElement;
   
-  let mynav_class = myul.parentElement;
+let mynav_class = myul.parentElement;
   
   // get nav class name
-  //alert(mynav.className);
+alert(mynav.className);
+function openNav() {
+  document.getElementsByClass("navbar__menu").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementsByClass("navbar__menu").style.width = "0";
+}
   
-  
-  projectData.create_nav();
+projectData.create_nav();
