@@ -49,3 +49,31 @@ function boundary2() {
     }
   );
 }
+ // get the ul element using HTML DOM
+  const myul = document.getElementById("navbar__list");
+  
+  // get the ul element
+  projectData['ul'] = myul;
+  
+  
+  // get the ul id
+  projectData['ulid'] = projectData.ul.id;
+  //alert(projectData.ulid);
+  
+  
+  // feature li 
+  let allli = document.querySelectorAll(".section");
+  //alert(allli);
+  
+  
+  // get the nav container
+  let mynav = myul.parentElement;
+  
+  let mynav_class = myul.parentElement;
+  
+  // get nav class name
+  //alert(mynav.className);
+  
+  
+  projectData.create_nav();
+  }
